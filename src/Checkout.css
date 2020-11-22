@@ -1,0 +1,35 @@
+.checkout__left__right {
+  display: flex;
+  padding: 20px;
+  background-color: white;
+}
+.checkout__left {
+  margin: 20px;
+  width: 70%;
+}
+
+.checkout__left h3 {
+  display: flex;
+  margin: 20px;
+}
+
+.checkout__right {
+  display: flex;
+  width: 30%;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout__left__right {
+    display: block;
+  }
+  .checkout__left {
+    width: 100%;
+    margin: 20px;
+  }
+
+  .checkout__right {
+    width: 100%;
+    margin: auto;
+  }
+}

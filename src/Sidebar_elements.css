@@ -1,0 +1,136 @@
+.home__left {
+  display: flex;
+  flex: 0.2;
+  flex-wrap: wrap;  
+}
+.home__right {
+  display: flex;
+  flex: 0.8;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.home__image {
+  width: 90% !important;
+  height: 100vh;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.home__left ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  margin-left: 10px;
+  margin-right: 50px;
+  color: white;
+  width: 20%;
+
+}
+
+.home__left ul li h2 {
+  padding: 10px;
+  margin: 0px;
+  background: #4caf50;
+  color: whitesmoke;
+  font-size: 18px !important;
+
+}
+.home__left ul li {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #4caf50;
+  align-items: center;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 2px 0px 6px 1px grey;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  list-style: none;
+  width: 90%;
+
+}
+.home__left ul .menu__items:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  color: #4caf50;
+}
+
+.item__category {
+  margin-right: 10px !important;
+}
+
+.icon_description{
+  display: flex;
+
+}
+
+.menu__items img{
+  margin: 2px;;
+  object-fit: contain;
+  height: 13px;
+  width: 13px;
+  display: flex;
+  position: fixed;
+  color: blue;
+}
+.menu__items p{
+  margin-left: 3px;
+}
+
+
+@media only screen and (max-width: 850px) {
+  .home__left {
+    display: block;
+    overflow: auto;
+  }
+  .header__right{
+    display: block;
+  }
+  .item__category {
+    margin-right: 12px !important;
+  }
+  .item__category h2 {
+    font-size: 14px;
+  }
+  .menu__items {
+    font-size: 11px !important;
+  }
+  .products {
+    display: flex;
+    justify-content: flex-end !important;
+  }
+  .product {
+    width: 200px !important;
+    height: 240px !important;
+    display: flex;
+    justify-content: flex-end !important;
+    align-items: flex-end;
+    margin-left: 40px !important;
+    margin: 0px !important;
+  }
+  .image {
+    width: 200px !important;
+    height: 130px !important;
+  }
+  .product img {
+    width: 180px !important;
+    height: 110px !important;
+    object-fit: contain;
+  }
+}
+
+.active_product .menu__items{
+  transition: all .2s ease-in;
+  transform: scale(1.02);
+  color: #4caf50;
+}
+
+
+
+
+

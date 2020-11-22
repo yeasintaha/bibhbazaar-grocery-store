@@ -1,0 +1,36 @@
+.checkout_total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+  height: 100px;
+  padding: 20px;
+  background-color: whitesmoke;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.checkout_total p{
+    line-height: 30px;
+    font-weight: 500;
+    
+}
+
+.checkout_total button {
+  background: #4caf51;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 2px solid rgb(9, 146, 9);
+  margin-top: 10px;
+  color:white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.checkout_total button:hover {
+  background: white;
+  color : #4caf51;
+  border:2px solid rgb(9, 146, 9);
+  transition: all 0.5s ease-in-out;
+}
