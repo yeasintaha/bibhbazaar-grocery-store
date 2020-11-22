@@ -7,24 +7,26 @@ import "./Checkout_Total.css"
 function Checkout_Total() {
     const history = useHistory();
     const [{cart,user}] = useStateValue();
+    let total =0;
+    const Total_Price = cart.map(item => total += item.price)
     //e => history.push('/payment') 
     const paymentMethod = ()=>{
-        if(user){
+        if(user && total!==0){
             history.push('/payment')
             db.collection('order_details').add({
                 username: user.email,
                 total_products:cart
             })
         }
-        else{
+        else if(!user){
             alert("You cannot proceed without login");
+        }
+        else{
+            alert("Add some products in the cart to checkout");
         }
     }
 
-    
-
-    let total =0;
-    const Total_Price = cart.map(item => total += item.price)
+        
     return (
         <div className="checkout_total">
             <p>

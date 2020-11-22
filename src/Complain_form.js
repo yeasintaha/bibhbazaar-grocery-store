@@ -7,7 +7,6 @@ import {useHistory} from "react-router-dom"
 import {all_items} from "./all_items"
 import Product from "./Product"
 import ScrollToTop from "react-scroll-to-top";
-import { Feedback } from '@material-ui/icons';
 
 
 function Complaint_form() {
@@ -71,7 +70,7 @@ function Complaint_form() {
             name:name,
             order_info:orderInfo,
         })
-        history.push('/payment')
+        history.push('/home')
         setName("");
         setContact("");
         setDate("");
@@ -83,7 +82,7 @@ function Complaint_form() {
         setOrderInfo("");
         setComplaintDetails("")
     }
-    console.log(name + " " + contact + " " + date + " " + issue);
+
     return (
         <div >
             <ScrollToTop 

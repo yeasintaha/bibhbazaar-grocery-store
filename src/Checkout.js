@@ -41,7 +41,26 @@ function Checkout() {
             <div data-aos="fade-right" className="checkout__left__right">   
                 <div className="checkout__left">           
                 {
-                    !user ? <h3>Hello , Guest </h3> : <h3>Hello , {user?.email}</h3>
+                    !user ? 
+                    <div style={{background:"whitesmoke",border:"2px solid lightgray",marginBottom:"10px",borderRadius:"5px"}}>
+                      <h3>Hello , Guest </h3> 
+                      {
+                          cart.length === 0 ? 
+                            <h4 style={{margin:"15px"}}> Your cart is empty , Add some product in the cart </h4> 
+                            :
+                            <h4 style={{margin:"15px"}}> Your cart items </h4>
+                      }
+                    </div>
+                      :
+                    <div style={{background:"whitesmoke",border:"2px solid lightgray" , marginBottom:"10px",borderRadius:"5px"}}> 
+                       <h3>Hello , {user?.email}</h3>
+                       {
+                          cart.length === 0 ? 
+                            <h4 style={{margin:"20px"}}> Your cart is empty , Add some product in the cart </h4> 
+                            :
+                            <h4 style={{margin:"20px"}}> Your cart items </h4>
+                      }
+                    </div>
                 }               
                 {
                     renderCart

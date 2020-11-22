@@ -1,6 +1,6 @@
 export const Discount_Items = [
 {
-    id: 66,
+    id: "66D",
     category:"Fresh Product",  
     image:"Fresh_product/Onion_local.jpg",
     product_name : "Onion (Local)",
@@ -10,7 +10,7 @@ export const Discount_Items = [
 
 },
 {
-    id: 75,
+    id: "75D",
     category:"Dairy",  
     image:"Dairy/Aarong_sweet_curd_500ml.jpg",
     product_name : 'Aarong Sweet Curd',
@@ -20,7 +20,7 @@ export const Discount_Items = [
 
 },
 {
-    id: 24,
+    id: "24D",
     category:"Biscuits_Cakes",
     image:"Images/Lexus.jpg",
     product_name : 'Danish Lexus',
@@ -31,7 +31,7 @@ export const Discount_Items = [
 
 },
 {
-    id: 123,
+    id: "123D",
     category:"Beauty and Hygiene",  
     image:"Beauty_and_hygiene/Pepsodent_sensitive_ex_prof_t_paste140gm.jpg",
     product_name : 'Pepsodent Sensitive Tooth Paste',
@@ -40,7 +40,7 @@ export const Discount_Items = [
     previousPrice:150,
 },
 {
-    id: 50,
+    id: "50D",
     category:"Bakery and Snacks",  
     image:"Images/GoldenHarveest_chicken_somosa.jpg",
     product_name : 'Golden Harvest Chicken Somosa',
@@ -49,7 +49,7 @@ export const Discount_Items = [
     previousPrice:210,
 },
 {
-    id: 85,
+    id: "85D",
     category:"Dairy",  
     image:"Dairy/Pran_butter_100g.jpg",
     product_name : 'Pran Butter',
@@ -59,7 +59,7 @@ export const Discount_Items = [
 
 },
 {
-    id: 71,
+    id: "71D",
     category:"Drinks",  
     image:"Drinks/Pepsi_2L.jpg",
     product_name : 'Pepsi',
@@ -69,13 +69,13 @@ export const Discount_Items = [
 
 },
 {
-    id: 9,
-    category:"Grocery",
-    image:"Images/Rupchada Soyabin Oil.png",
-    product_name : 'Rupchada Soyabin Oil',
-    unit : '2 L',
-    price: 180,
-    previousPrice:200
+    id: "127D",
+    category:"Beauty and Hygiene",  
+    image:"Beauty_and_hygiene/Axe_body_spray150ml.jpg",
+    product_name : 'Axw Body Spray',
+    unit : '150 mL',
+    price: 250,
+    previousPrice:300,
 
 },
 
