@@ -1,7 +1,8 @@
 import React ,{useState,useEffect} from 'react'
 import "./MainPage_body.css";
+import {useStateValue} from "./StateProvider"
 import MainPage_header from "./MainPage_header";
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import {Link as LinkS} from 'react-scroll';
 import styled from "styled-components"
 import Footer from "./Footer"
@@ -18,8 +19,12 @@ import Slide from 'react-reveal/Slide';
 import Flash from "react-reveal/Flash"
 import Shake from 'react-reveal/Shake';
 import Pulse from 'react-reveal/Pulse';
+import { auth } from './firebase';
 
 function MainPage_body() {
+
+    const [{ cart, user }] = useStateValue();
+
     const [showup, setShowup] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll",()=>{
@@ -39,6 +44,16 @@ function MainPage_body() {
         color:#4caf50;
         font-size:40px;
     `
+    const history = useHistory();
+    const handleChange = ()=>{
+        if(user){
+            auth.signOut();
+            history.push("/");
+        }
+        else{
+            history.push("/signin");
+        }
+    }
 
        
     return (
@@ -66,11 +81,11 @@ function MainPage_body() {
                         </ul>
                     </div>
                     <div className='main__nav'>            
-                        <Link to="/signin" style={{textDecoration: 'none',color:'whitesmoke'}} >
-                            <div className='main__option'>
-                                Sign In
+                            <div className='main__option' onClick={handleChange} style={{cursor:"pointer"}}>
+                               {
+                                    user ?  "Sign Out" : "Sign In"
+                               } 
                             </div>
-                        </Link>
                     </div>
                 </div>
                 

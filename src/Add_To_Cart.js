@@ -16,3 +16,4 @@ export const removeFromCart = (product) => {
 
     console.log("this has been removed from the cart " + cart.length)     
 }
+

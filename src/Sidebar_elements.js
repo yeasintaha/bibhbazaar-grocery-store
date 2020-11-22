@@ -35,7 +35,7 @@ function Sidebar_elements() {
     return (
         <div className="home__left">
             <ul className="item__category">
-              <li onMouseEnter={()=> setShowcategory(!showcategory)} onClick={()=> setShowcategory(!showcategory)} >
+              <li onMouseEnter={()=> setShowcategory(!showcategory)} onClick={()=> setShowcategory(!showcategory)} style={{cursor:"pointer"}}>
                 <h2 style={{display:'flex',alignItems:"center"}}>
                   <GiHamburgerMenu style={{display:'flex', marginRight:"3px", alignSelf:"center"}}/>
                   {

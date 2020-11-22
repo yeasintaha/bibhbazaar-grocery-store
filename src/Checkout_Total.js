@@ -10,20 +10,24 @@ function Checkout_Total() {
     let total =0;
     const Total_Price = cart.map(item => total += item.price)
     //e => history.push('/payment') 
-    const paymentMethod = ()=>{
-        if(user && total!==0){
+    const paymentMethod = ()=>{        
+        if(!user){
+            alert("You cannot proceed without login");
+        }
+        else if(total===0){
+            alert("your cart is empty, add some products to checkout");
+        }
+        else if(total < 300){
+            alert("You cannot order below 300 taka products");
+        }
+        else {
             history.push('/payment')
             db.collection('order_details').add({
                 username: user.email,
                 total_products:cart
             })
         }
-        else if(!user){
-            alert("You cannot proceed without login");
-        }
-        else{
-            alert("Add some products in the cart to checkout");
-        }
+        
     }
 
         

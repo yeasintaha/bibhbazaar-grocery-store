@@ -20,6 +20,7 @@ import Beauty_and_hygiene from './Beauty_and_hygiene';
 import Show_Discount_Products from "./Show_Discount_Products"
 import {auth} from "./firebase"
 import { useStateValue } from './StateProvider';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <Router> 
+      <ScrollToTop/>
       <Switch>
           <Route path="/" exact component={MainPage} />
           <Route path="/home"  component={Home}/> 

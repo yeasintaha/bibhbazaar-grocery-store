@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
+import {Link} from "react-router-dom"
 import "./Product.css";
 import { useStateValue } from './StateProvider';
-
+import {showProducts} from "./Add_To_Cart"
 
 
 function Product(product) {
@@ -20,14 +21,17 @@ function Product(product) {
           }
         })
     }
+    
 
     return (
       <div className="products">
-        <div className="product ">
-          <div className="image">
-            <img src={product.image} alt=""  />
-          </div>          
-          <div className="product__info">
+      
+        <div className="product ">          
+          <div className="image" style={{}}>
+            <img src={product.image} alt="" style={{objectFit:"contain"}}/>
+          </div>   
+
+          <div className="product__info" style={{cursor:"pointer"}}>
             <h4 className="productname">{product.product_name}</h4>
             <p className="unit">{product.unit}</p>
             <p className="product__price">
