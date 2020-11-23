@@ -15,7 +15,7 @@ function Complaint_form() {
     const [searchResults, setSearchResults] = React.useState([]);
     const handleChange = event => {
         setSearchTerm(event.target.value);
-      };
+    };
     
       React.useEffect(() => {
       const results = all_items.filter(item =>
@@ -58,8 +58,11 @@ function Complaint_form() {
 
     const handleSubmit =(e)=>{
         e.preventDefault();
-
-        db.collection('complain--form').add({
+        if(name==="" || date==="" || orderInfo==="" || contact==="" || email==="" || issue==="" || location===""){
+            alert("Fill up the form properly");
+        }
+        else{
+            db.collection('complain--form').add({
             complaint_details: complaintDetails,
             contact:contact,
             date:date,
@@ -69,18 +72,20 @@ function Complaint_form() {
             location:location,
             name:name,
             order_info:orderInfo,
-        })
-        history.push('/home')
-        setName("");
-        setContact("");
-        setDate("");
-        setEmail("");
-        setFeedback("");
-        setIssue("");
-        setLocation("");
-        setIssue("");
-        setOrderInfo("");
-        setComplaintDetails("")
+            })            
+            history.push('/home');
+            setName("");
+            setContact("");
+            setDate("");
+            setEmail("");
+            setFeedback("");
+            setIssue("");
+            setLocation("");
+            setIssue("");
+            setOrderInfo("");
+            setComplaintDetails("")
+        }
+        
     }
 
     return (
@@ -100,7 +105,6 @@ function Complaint_form() {
                     <br/>
                     <p> Please send us details about the incident you would like to report. Our Complaint Center will analyze your complaint and take the appropriate measures in order that the reported situation will not occur at any other time in the future. Please note that- Complaint must be submitted within 24hrs of receiving your products. </p>
                     <br/>
-
                 </div>
                 <form action="" method="GET" >
                     <div className="date_of_complaints">

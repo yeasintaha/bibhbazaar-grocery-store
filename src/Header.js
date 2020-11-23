@@ -7,10 +7,7 @@ import {NavLink as Link} from 'react-router-dom';
 import ForumIcon from '@material-ui/icons/Forum';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import styled from "styled-components";
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import {auth } from "./firebase"
-
-
 
 function Header({searchTerm,handleChange}) {
 
@@ -57,7 +54,6 @@ function Header({searchTerm,handleChange}) {
 
       <div className='header__search'>
         <input className='header__searchInput' type='text'
-          type="text"
           placeholder="Search"
           value={searchTerm}
           onChange={handleChange}
@@ -66,8 +62,6 @@ function Header({searchTerm,handleChange}) {
       </div>
       
       <NavMenu>
-          {/* <MoreVertIcon onClick={()=> setShowLeftmenu(true)}
-               style={{position:'fixed' , display:"flex", top:"25px" , right:"10px" , alignSelf:"center !important",color:"whitesmoke",marginLeft:"5px",marginRight:"5px"}}/> */}
           <div className='header__nav'>
             <Link to="/complain" style={{textDecoration:"none"}} activeStyle>
               <div className="header__icon">
@@ -94,31 +88,6 @@ function Header({searchTerm,handleChange}) {
           </Link>
         </div>
       </NavMenu>
-      
-{/*       
-      <div className="click_Leftmenu">
-          <Link to="/signin" style={{textDecoration:"none"}}  activeStyle>
-            <div className="header__Leftmenu">
-                  <PersonOutlineIcon/>
-                  <p>Sign In</p>
-            </div>
-          </Link>
-          <Link to="/signin" style={{textDecoration:"none"}}  activeStyle>
-            <div className="header__Leftmenu">
-                  <PersonOutlineIcon/>
-                  <p>Sign In</p>
-            </div>
-          </Link>
-          <Link to="/signin" style={{textDecoration:"none"}}  activeStyle>
-            <div className="header__Leftmenu" style={{display:"flex", alignItems:"center"}}>
-                  <ShoppingBasketIcon style={{display:"flex" ,marginRight:"10px"}} />
-                  <p>Add to Cart</p>
-            </div>
-          </Link>
-      </div> */}
-    
-    
-
     </div>
     
     
