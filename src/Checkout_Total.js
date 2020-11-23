@@ -6,7 +6,7 @@ import "./Checkout_Total.css"
 
 function Checkout_Total() {
     const history = useHistory();
-    const [{cart,user}] = useStateValue();
+    const [{cart,user},dispatch] = useStateValue();
     let total =0;
     const Total_Price = cart.map(item => total += item.price)
     //e => history.push('/payment') 
@@ -26,8 +26,10 @@ function Checkout_Total() {
                 username: user.email,
                 total_products:cart
             })
-        }
-        
+            dispatch({
+                type:"EMPTY_THE_CART",                
+            })            
+        }        
     }
 
         

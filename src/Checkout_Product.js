@@ -25,8 +25,10 @@ function Checkout_Product({product}) {
 
     return (
         <div data-aos="fade-right" className="checkout__product">  
-            <div className="checkout_items">         
-                <img src={product.image} alt=""/> 
+            <div className="checkout_items">    
+                <div className="checkout__image">   
+                    <img src={product.image} alt=""/> 
+                </div>  
                 <div className="checkout__product__info">
                     <h4>{product.product_name}</h4>
                     <p>{product.unit}</p>

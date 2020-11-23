@@ -1,5 +1,3 @@
-import { cart } from "./Add_To_Cart"
-
 export const initialState = {
     cart : [],
     user:null
@@ -18,7 +16,11 @@ const reducer = (state,action) =>{
                 ...state,
                 cart: state.cart.filter(item=> item !== action.product)
             };
-            
+        case "EMPTY_THE_CART" :
+            return {
+                ...state,
+                cart:[],
+            };
         case "SET_USER" :
             return {
                 ...state,
