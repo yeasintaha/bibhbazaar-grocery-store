@@ -1,6 +1,6 @@
 
 
-[Web App] https://bibhbazaar-grocery-store.web.app/
+[Local Grocery Store Web Application](https://bibhbazaar-grocery-store.web.app/)
 
 ## Available Scripts
 
